@@ -69,5 +69,5 @@ api.add_resource(Todo, "/todos/<int:todo_id>")
 api.add_resource(TodoList, "/todos")
 
 if __name__ == "__main__":
-    port = int(os.environ.get('PORT', 33507))
-    app.run(debug=True, port=port)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
