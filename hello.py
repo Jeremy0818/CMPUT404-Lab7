@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+import os
 from flask import Flask
 from flask_restful import reqparse, abort, Api, Resource
 
@@ -69,4 +69,5 @@ api.add_resource(Todo, "/todos/<int:todo_id>")
 api.add_resource(TodoList, "/todos")
 
 if __name__ == "__main__":
-    app.run()
+    port = int(os.environ.get('PORT', 33507))
+    app.run(debug=True, port=port)
