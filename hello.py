@@ -69,4 +69,4 @@ api.add_resource(Todo, "/todos/<int:todo_id>")
 api.add_resource(TodoList, "/todos")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
