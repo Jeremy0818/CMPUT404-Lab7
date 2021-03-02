@@ -1,18 +1,40 @@
+Question 0: What is the URL of your python flask_restfull code on github???
+https://github.com/Jeremy0818/CMPUT404-Lab7
+
+
 Question 1: How are Flask and Django different? What does Django provide for you that Flask does not?
+The main difference between Flask and Django is that Django is a framework that includes most of the useful features which helps developer build a complex web application altogether where flask is a simple framework that requires additional steps to build up a complex web application.
+Django provides authentication and authorization functionalities, moreover,  but Flask does not.
+Django also provides its own Django ORM (object-relational mapping) that supprots a number of relational databases and uses data models, while Flask doesn't have any data models at all. Data models is better for CRUD web application development.
+
 
 Question 2: What does REST stand for? When I say something is RESTful, what does that mean?
+REST stands for REpresentational State Transfer. It is a architetural style for software, especially web APIs. Something is called RESTful if the design includes the properties of performance, simpilcity and reliability. The five constraints are client-server, stateless, cacheable, uniform interface, and layered system.
+
 
 Question 3: What does CRUD stand for? For each letter in CRUD, give the associated HTTP method.
+CRUD stands for Create, Read, Update, and Delete, which are the four major functions used to interact with the server. 
+The associated HTTP method for each letter:
+CREATE = POST, READ = GET, UPDATE = PUT, DELETE = DELETE
+
 
 Question 4: What do HTTP 1XX Status Codes mean? HTTP 2xx? HTTP 3xx? HTTP 4xx? HTTP 5xx?
+1XX — Informational codes, ex: 100 Continue
+2XX — Success codes, ex: 200 OK
+3XX — Redirection codes, ex: 301 Moved Permanently
+4XX — Client Error codes, ex: 404 Not Found
+5XX — Server Error codes, ex: 500 Internal Server Error
+
 
 Question 5: What is an XSS attack? Provide one way a site can be vulneratble to an XSS attack.
+Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are injected into otherwise benign and trusted websites. XSS attacks occur when an attacker uses a web application to send malicious code, generally in the form of a browser side script, to a different end user.
+
+One way a site can be vulnerable to an XSS attack is when the data is included in dynamic content that is sent to a web user without being validated for malicious content. The malicious content sent to the web browser often takes the form of a segment of JavaScript.
+
 
 Question 6: What does CORS stand for? What situation in web application development will you need to implement CORS?
+CORS stands for Cross-Origin Resource Sharing, which is an HTTP-header based mechanism that allows a server to indicate any other origins (domain, scheme, or port) than its own from which a browser should permit loading of resources. The CO part of CORS means cross-origin, which indicates that CORS should be implemented when the web application will make a cross-origin request. For example, the front-end JavaScript code served from a domain uses XMLHttpRequest to make a request for another domain to load some resources. CORS is used for security reasons. This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
 
-Hint: What does the CO part of CORS mean?
-
-Optional: Deploy your Flask application to Heroku.
 
 How does your Procfile change when compared to a Django application?
-The content of the Procfile is: web: gunicorn app:app
+web: python hello.py
